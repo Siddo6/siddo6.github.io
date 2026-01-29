@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="images/keyboard.jpg" as="image">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/resume.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script src="./assets/js/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+    <title>Siddo's Web Page</title>
+</head>
+<body class="home-background">
+   <nav class="navbar no-bg ">
+    <div  class="logo">
+        <a href="../../index.html" >
+                    <img src="../images/white_logo2.png" alt="" class="logo_nobg"></a>
+    </div>
+    <div class="hamburger">
+        <div class="line1 nobg"></div>
+        <div class="line2 nobg"></div>
+        <div class="line3 nobg"></div>
+        </div>
+       <ul class="nav-links">
+            <li class=""><a href="../../index.html" >HOME</a></li>
+            <li class="a"><a href="./about.html" >ABOUT ME</a></li>
+            <li class="a"><a href="./portfolio.html" >PORTFOLIO</a></li>
+            <li class="a"><a href="./resume.html" >RESUME</a></li>
+            <li class="a"><a href="./contact.html" >CONTACT</a></li>
+            
+        </ul>
+</nav>
+
+<div class="contact_page">
+    <div class="contact_me">CONTACT ME : </div>
+    <div class="contacts">
+        <div class="card" onclick="flipCard(this)">
+            <div class="front">
+                <div>SIDORELA HAMZALLARI</div>
+            </div>
+            <div class="back">
+                <div class="container">
+                    <div class="box">
+                        <img src="../images/gmail.png" class="contact_logo" alt="Gmail" loading="lazy">
+                        <a href="mailto:contact.sidorela@gmail.com" class="link">contact.sidorela@gmail.com</a>
+                    </div>
+                    
+                    <div class="box">
+                        <img src="../images/whatsapp.png" class="contact_logo" alt="WhatsApp" loading="lazy">
+                        <a href="https://wa.me/355693468254" class="link" target="_blank">+355 69 34 68 254</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <footer class="myfooter_nobg">
+        &copy; 2026 Created by Siddo. ALL RIGHTS RESERVED.
+</footer>
+<script>
+    function flipCard(cardElement) {
+            cardElement.classList.toggle('flipped');
+        }
+</script>
+</body>
+</html>

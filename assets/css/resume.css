@@ -1,0 +1,160 @@
+.cv {
+    display: grid;
+    width: 80%; 
+    margin: 0 auto;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    margin-bottom: 10vh;
+    margin-top: 4vh;
+    box-shadow: 2px 4px 8px rgb(7, 89, 133, 0.4);
+    padding: 24px;
+}
+
+
+.grid-item{
+    text-align: center;
+}
+
+.grid-item:first-child {
+    grid-column: span 2; 
+}
+
+.skills {
+    grid-column: span 2;
+}
+.name{
+    font-size: 2em;
+}
+
+.blue{
+    color: #0075A9;
+}
+
+.datas{
+    color: rgb(0, 0, 0, 0.5);
+    grid-column: span 2;
+}
+
+.nested-grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    
+}
+.nested-grid-item {
+    text-align: center;
+}
+
+.nested-grid-item:hover {
+    color:#0075A9;
+    font-size: larger;
+}
+
+li:hover {
+    color:#0075A9;
+    font-weight: inherit;
+}
+
+.job {
+    grid-row: span 4;
+    text-align: left;
+    justify-items: center;
+}
+
+.job li:hover{
+    font-weight: inherit;
+}
+
+strong{
+    font-size: 1.2em;
+}
+
+.button-row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 16px 32px;
+}
+
+.pdf-button{
+    background-color: #0075A9;
+    width: fit-content;
+    height: 24px;
+    padding: 16px 32px;
+    border-radius: 6px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;}
+
+@media screen and (max-width: 1250px) {
+        .pdf-button{
+            display: none;
+        }
+    }
+
+@media screen and (max-width: 800px) {
+    .pdf-button{
+        display: none;
+    }
+
+    .cv {
+        width: 90%; 
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 8px 16px;
+        margin-bottom: 10vh;
+        margin-top: 10vh;
+    }
+    .name{
+        font-size: 1.4em;
+        text-align: center;
+    }
+    .grid-item:first-child {
+        grid-column: span 1; /* Span only one column in the single column layout */
+    }
+    .datas{
+        font-size: 0.9em;
+        grid-column: span 1;
+    }
+    .skills {
+        grid-column: span 1;
+    }
+
+    .nested-grid-container {
+        display: grid; /* Ensure this is set */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        font-size: 1em;
+    }
+
+    .name {
+        order: 1;
+    }
+
+    .datas {
+        order: 2;
+    }
+
+    
+    .skills {
+        order: 3;
+        }
+        
+    .languages {
+        order: 4;
+            }
+    .courses{
+        order: 5;
+    }
+
+    .education{
+        order: 6;
+    }
+
+    .job{
+        order: 7;
+    }
+
+
+}

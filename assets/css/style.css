@@ -1,0 +1,225 @@
+body {
+  max-width: 100vw;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+nav {
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 94vw;
+  padding: 0 0.7vw;
+  justify-content: end;
+  align-items: center;
+  text-transform: uppercase;
+}
+.nav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #f2f5f7;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger .nobg {
+  width: 30px;
+  height: 3px;
+  background: #0075A9 ;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navbar li {
+  color: aliceblue;
+}
+.navbar li:hover {
+  color: aliceblue;
+  font-weight: 600;
+}
+.navbar_nobg li {
+  color: #0075a9;
+}
+.navbar_nobg li:hover {
+  font-weight: 600;
+}
+.no-bg {
+  box-shadow: 0px 4px 8px rgb(7, 89, 133, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo_container{
+  display: flex;
+  align-items: center;
+}
+
+.logo, .logo_nobg {
+  width: 50px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.myfooter {
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0px -4px 8px rgb(7, 89, 133, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  color: #0075a9;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myfooter_nobg {
+  position: fixed;
+  bottom: 0;
+  color: aliceblue;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .col1 {
+    font-weight: 300;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+
+  .col1 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .col2 {
+    display: none;
+  }
+}
+
+.text {
+  color: aliceblue;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*Stying nav for small screens*/
+@media screen and (max-width: 800px) {
+  nav {
+    position: fixed;
+    z-index: 3;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: fixed;
+    background: rgb(0, 117, 169, 0.9);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    justify-content: space-around;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.1s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.3s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.5s;
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.6s;
+    margin: 0;
+  }
+  .nav-links li:nth-child(7) {
+    transition: all 0.5s ease 7s;
+    margin: 0;
+  }
+  li.fade {
+    opacity: 1;
+  }
+  .navbar_nobg li {
+    color: #f8fdff;
+  }
+}

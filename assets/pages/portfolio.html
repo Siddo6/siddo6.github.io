@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="images/keyboard.jpg" as="image">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/resume.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script src="./assets/js/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+    <title>Siddo's Web Page</title>
+</head>
+<body class="">
+<nav class="navbar_nobg no-bg">
+    <div  class="logo">
+        <a href="../../index.html" >
+                    <img src="../images/blue_logo.png" alt="" class="logo_nobg"></a>
+    </div>
+    <div class="hamburger">
+        <div class="line1 nobg"></div>
+        <div class="line2 nobg"></div>
+        <div class="line3 nobg"></div>
+        </div>
+        <ul class="nav-links">
+            <li class="a"><a href="../../index.html" >HOME</a></li>
+            <li class="a"><a href="./about.html" >ABOUT ME</a></li>
+            <li class="a"><a href="./portfolio.html" >PORTFOLIO</a></li>
+            <li class="a"><a href="./resume.html" >RESUME</a></li>
+            <li class="a"><a href="./contact.html" >CONTACT</a></li>
+       </ul>
+</nav>
+
+<style>
+.body{
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+.container{
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+}
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.block1 {
+    background-color: #ffffff5e; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px -4px 8px rgb(7, 89, 133, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    color: #0075a9;
+    flex-basis: calc(45%); 
+    min-height: 35vh;
+   
+}
+
+/* Mobile responsiveness: Stack cards on smaller screens */
+@media (max-width: 768px) {
+    .block1 {
+        flex-basis: 80%; /* Take up 100% width on mobile */
+    }
+}
+
+/* Styling for the card content */
+.name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+.description {
+    margin-bottom: 10px;
+    font-family: 'lora';
+}
+
+.technologies {
+    font-style: italic;
+    color: #0e0202;
+    font-family: 'lora';
+    margin-bottom: 20px;
+}
+
+.github button{
+    background-color: #0075a9;
+    color: aliceblue;
+    width: 200px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0px 4px 8px rgb(7, 89, 133, 0.4);
+}
+</style>
+<div class="body">
+<div class="container">
+    <div class="projects-grid">
+        <div class="block1">
+            <div class="name">CAR RENTAL MANAGEMENT APP</div>
+            <div class="description">This Car Rental Management App allows renters to manage their fleet of cars and handle reservations efficiently. The app focuses on the administration side, where the renter can add cars, update their availability, and manage reservations. It is designed for internal use by the car rental company.</div>
+            <div class="technologies">Backend: Django (Python), Frontend: HTML, CSS, JavaScript, Database: PostgreSQL/SQLite</div>
+            <div class="github"><button><a href="https://github.com/Siddo6/rent-a-car-portfolio" target="_blank">View GitHub Repository</a></button></div>
+        </div>
+
+        <div class="block1">
+            <div class="name">INVENTORY MANAGEMENT APP</div>
+            <div class="description">This Inventory Management App helps businesses manage their product stock, track purchases and sales, and generate monthly reports. Built with a focus on simplicity and scalability. (A work in progress...)</div>
+            <div class="technologies">Backend: Django (Python), Frontend: HTML, CSS, JavaScript, Database: PostgreSQL/SQLite</div>
+            <div class="github"><button><a href="https://github.com/Siddo6/inventory-app" target="_blank">View GitHub Repository</a></button></div>
+        </div>
+
+        <div class="block1">
+            <div class="name">RECIPE SHARING APP</div>
+            <div class="description">A platform for users to share, explore, and review different recipes from around the world. Includes user authentication and a commenting system.</div>
+            <div class="technologies">Backend: Django (Python), Frontend: HTML, CSS, JavaScript, Database: SQLite</div>
+            <div class="github"><button><a href="https://github.com/Siddo6/recipe-sharing-app" target="_blank">View GitHub Repository</a></button></div>
+        </div>
+
+        <div class="block1">
+            <div class="name">SALARY CALCULATION PROGRAM</div>
+            <div class="description">A simple program so i can calculate my salary and bonuses based on hours worked, overtime.</div>
+            <div class="technologies">Python</div>
+            <div class="github"><button><a href="https://github.com/Siddo6/salary_calculation_app" target="_blank">View GitHub Repository</a></button></div>
+        </div>
+
+        <div class="block1">
+            <div class="name">LANDING PAGE TEMPLATE</div>
+            <div class="description">This is a course homework project to recreate a landing page from a given template. The goal was to rebuild the first page exactly as provided, focusing on structure, layout, and styling.</div>
+            <div class="technologies">Html/Css</div>
+            <div class="github"><button><a href="https://github.com/Siddo6/Template-Landing-Page" target="_blank">View GitHub Repository</a></button></div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<footer class="myfooter">
+    &copy; 2026 Created by Siddo. ALL RIGHTS RESERVED.
+</footer>
+</body>
+</html>
