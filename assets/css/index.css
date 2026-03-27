@@ -1,24 +1,6 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
-}
-
-.index-container{
-    height: 100%;
-}
-
-.index{
-    height: 94vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 3vh;
-}
-
-body.home-background{
-    background: 
+/* ── Keyboard background — kept for contact.html ── */
+body.home-background {
+    background:
         linear-gradient(to bottom, rgba(0, 117, 169, 0.6), rgba(0, 105, 152, 0.6), rgba(0, 94, 136, 0.6), rgba(1, 83, 120, 0.6), rgba(3, 72, 105, 0.6)),
         url('../images/keyboard.jpg');
     background-repeat: no-repeat;
@@ -28,114 +10,211 @@ body.home-background{
     height: 100vh;
 }
 
-.index-text{
+/* ── Split layout ── */
+.home-split {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    padding: 0 8vw;
+    gap: 4vw;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ── Left column ── */
+.home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.home-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 4px #000000;
-    text-align: center;
-}
-
-.t1{
-    font-size: 24px;
-    color: #f1fbffd4;
-}
-
-.t3{
-    font-size: 36px;
-}
-
-.about-button, .pdf-home-button{
-    width: 200px;
-    padding: 12px 24px;
-    border-radius: 24px;
-    margin: 12px 24px;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.about-button{
     color: #0075A9;
-    background-color: aliceblue;
+    margin-bottom: 18px;
 }
 
-.pdf-home-button{
-    color: aliceblue;
+.home-name {
+    font-family: "Playfair Display", serif;
+    font-size: 92px;
+    font-weight: 700;
+    font-style: italic;
+    color: #0d1b2a;
+    line-height: 0.95;
+    margin: 0 0 28px;
+    letter-spacing: -1px;
+}
+
+.home-divider {
+    width: 48px;
+    height: 3px;
+    background: #0075A9;
+    margin-bottom: 22px;
+    border-radius: 2px;
+}
+
+.home-typewriter {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #0075A9;
+    min-height: 1.6em;
+    margin-bottom: 40px;
+}
+
+/* ── Buttons ── */
+.home-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.about-button, .pdf-home-button {
+    padding: 13px 28px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.about-button:hover, .pdf-home-button:hover {
+    transform: translateY(-2px);
+}
+
+.about-button {
+    color: #0075A9;
+    background-color: #e8f4fb;
+    border: 1.5px solid #0075A9;
+}
+
+.pdf-home-button {
+    color: #ffffff;
     background-color: #0075A9;
+    border: 1.5px solid #0075A9;
 }
 
-.about-button:hover{
-    background-color: #A2ACBD;
+.about-button:hover {
+    background-color: #cce8f4;
 }
 
-.pdf-home-button:hover{
-    background-color: #A2ACBD;
+.pdf-home-button:hover {
+    background-color: #005f87;
+    border-color: #005f87;
 }
 
-
-.index-img{
-    width: 400px;
+/* ── Right column — floating avatar ── */
+.home-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .home-avatar {
-    max-width: 100%; /* Optional: ensures the image scales within the container */
-    height: auto;
-   border-radius: 24px;
+    width: 90%;
+    max-width: 380px;
+    border-radius: 28px;
+    box-shadow:
+        0 28px 60px rgba(0, 117, 169, 0.16),
+        0 6px 20px rgba(0, 117, 169, 0.10);
+    animation: float 5s ease-in-out infinite;
 }
 
-@media screen and (max-width: 1100px){
-
-    .t3{
-        font-size: 24px;
-    }
-    
-
+@keyframes float {
+    0%, 100% { transform: translateY(0px);   }
+    50%       { transform: translateY(-14px); }
 }
 
-@media screen and (max-width: 900px){
+/* ── Ticker strip ── */
+.ticker-wrap {
+    position: fixed;
+    bottom: 6vh;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background: #0075A9;
+    overflow: hidden;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+}
 
-    .grid-container {
-        grid-template-columns: auto;
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker-scroll 28s linear infinite;
+}
+
+.ticker-content {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.88);
+    font-family: "Playfair Display", serif;
+}
+
+@keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ── Typewriter cursor ── */
+.typewriter-cursor {
+    animation: blink 0.85s step-end infinite;
+    color: #0075A9;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 1100px) {
+    .home-name { font-size: 72px; }
+}
+
+@media screen and (max-width: 900px) {
+    .home-split {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 14vh 6vw 0;
+        gap: 0;
     }
 
-    .col2{
-        display: none;
-    }
-
-    .index{
-        height: 86vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .home-left {
         align-items: center;
     }
 
-    .t3{
-        font-size: 20px;
-    }
+    .home-name  { font-size: 56px; }
+    .home-right { display: none;   }
 
-    .t1{
-        font-size: 18px;
+    .home-buttons {
+        justify-content: center;
     }
-
-    .about-button, .pdf-home-button{
-        width: 150px;
-        padding: 8px 16px;
-        border-radius: 24px;
-        margin: 8px 16px;
-        font-size: 16px;
-    }
-
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px) {
+    .home-name      { font-size: 42px; }
+    .home-label     { font-size: 10px; letter-spacing: 3px; }
+    .home-typewriter { font-size: 15px; }
 
-
-    .about-button, .pdf-home-button{
-        width: 120px;
-        padding: 8px 16px;
-        border-radius: 24px;
-        margin: 8px 16px;
-        font-size: 12px;
+    .about-button, .pdf-home-button {
+        padding: 11px 20px;
+        font-size: 13px;
     }
-
 }

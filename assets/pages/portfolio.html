@@ -17,9 +17,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   
-    <title>Siddo's Web Page</title>
+    <title>Siddo | Portfolio</title>
 </head>
-<body class="">
+<body class="light-bg">
 <nav class="navbar_nobg no-bg">
     <div  class="logo">
         <a href="../../index.html" >
@@ -57,7 +57,7 @@
 }
 
 .block1 {
-    background-color: #ffffff5e; 
+    background-color: #ffffff5e;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px -4px 8px rgb(7, 89, 133, 0.4);
@@ -65,9 +65,45 @@
     -webkit-backdrop-filter: blur(10px);
     border: none;
     color: #0075a9;
-    flex-basis: calc(45%); 
+    flex-basis: calc(45%);
     min-height: 35vh;
-   
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.block1:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 14px 28px rgb(7, 89, 133, 0.2);
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2vw 16px;
+}
+
+.github-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0075a9;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: 'lora';
+    border: 1.5px solid #0075a9;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.github-profile-link:hover {
+    background-color: #0075a9;
+    color: #fff;
+}
+
+.github-profile-link svg {
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
 }
 
 /* Mobile responsiveness: Stack cards on smaller screens */
@@ -109,39 +145,45 @@
 </style>
 <div class="body">
 <div class="container">
+    <div class="portfolio-header">
+        <a href="https://github.com/Siddo6" target="_blank" class="github-profile-link">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.51 11.51 0 0 1 3.003-.404c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            View all on GitHub
+        </a>
+    </div>
     <div class="projects-grid">
-        <div class="block1">
+        <div class="block1 fade-in-up" style="transition-delay: 0.05s;">
             <div class="name">CAR RENTAL MANAGEMENT APP</div>
             <div class="description">This Car Rental Management App allows renters to manage their fleet of cars and handle reservations efficiently. The app focuses on the administration side, where the renter can add cars, update their availability, and manage reservations. It is designed for internal use by the car rental company.</div>
             <div class="technologies">Backend: Django (Python), Frontend: HTML, CSS, JavaScript, Database: PostgreSQL/SQLite</div>
             <div class="github"><button><a href="https://github.com/Siddo6/rent-a-car-portfolio" target="_blank">View GitHub Repository</a></button></div>
         </div>
 
-        <div class="block1">
+        <div class="block1 fade-in-up" style="transition-delay: 0.15s;">
             <div class="name">INVENTORY MANAGEMENT APP</div>
-            <div class="description">This Inventory Management App helps businesses manage their product stock, track purchases and sales, and generate monthly reports. Built with a focus on simplicity and scalability. (A work in progress...)</div>
+            <div class="description">This Inventory Management App helps businesses manage their product stock, track purchases and sales, and generate monthly reports. Built with a focus on simplicity and scalability.</div>
             <div class="technologies">Backend: Django (Python), Frontend: HTML, CSS, JavaScript, Database: PostgreSQL/SQLite</div>
             <div class="github"><button><a href="https://github.com/Siddo6/inventory-app" target="_blank">View GitHub Repository</a></button></div>
         </div>
 
-        <div class="block1">
+        <div class="block1 fade-in-up" style="transition-delay: 0.25s;">
             <div class="name">RECIPE SHARING APP</div>
             <div class="description">A platform for users to share, explore, and review different recipes from around the world. Includes user authentication and a commenting system.</div>
             <div class="technologies">Backend: Django (Python), Frontend: HTML, CSS, JavaScript, Database: SQLite</div>
             <div class="github"><button><a href="https://github.com/Siddo6/recipe-sharing-app" target="_blank">View GitHub Repository</a></button></div>
         </div>
 
-        <div class="block1">
+        <div class="block1 fade-in-up" style="transition-delay: 0.35s;">
             <div class="name">SALARY CALCULATION PROGRAM</div>
-            <div class="description">A simple program so i can calculate my salary and bonuses based on hours worked, overtime.</div>
+            <div class="description">A program to calculate salary and bonuses based on hours worked and overtime.</div>
             <div class="technologies">Python</div>
             <div class="github"><button><a href="https://github.com/Siddo6/salary_calculation_app" target="_blank">View GitHub Repository</a></button></div>
         </div>
 
-        <div class="block1">
+        <div class="block1 fade-in-up" style="transition-delay: 0.45s;">
             <div class="name">LANDING PAGE TEMPLATE</div>
-            <div class="description">This is a course homework project to recreate a landing page from a given template. The goal was to rebuild the first page exactly as provided, focusing on structure, layout, and styling.</div>
-            <div class="technologies">Html/Css</div>
+            <div class="description">A course project to recreate a landing page from a given template, focusing on structure, layout, and pixel-accurate styling.</div>
+            <div class="technologies">HTML / CSS</div>
             <div class="github"><button><a href="https://github.com/Siddo6/Template-Landing-Page" target="_blank">View GitHub Repository</a></button></div>
         </div>
     </div>

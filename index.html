@@ -4,58 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preload" as="image" href="./assets/images/keyboard.jpg">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/resume.css">
     <link rel="stylesheet" href="./assets/css/about.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/contact.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <script src="./assets/js/script.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  
-    <title>Siddo's Web Page</title>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <title>Siddo | Home</title>
 </head>
-<body class="home-background">
-    <nav class="navbar">
-        <div  class="logo_container">
-            <a href="" >
-                        <img src="./assets/images/white_logo2.png" alt="" class="logo" loading="lazy"></a>
+<body class="light-bg">
+
+    <nav class="navbar_nobg no-bg">
+        <div class="logo_container">
+            <a href="./index.html"><img src="./assets/images/blue_logo.png" alt="" class="logo" loading="lazy"></a>
         </div>
         <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-            </div>
-            <ul class="nav-links">
-                <li class="a"><a href="./index.html" >HOME</a></li>
-                <li class="a"><a href="./assets/pages/about.html" >ABOUT ME</a></li>
-                <li class="a"><a href="./assets/pages/portfolio.html" >PORTFOLIO</a></li>
-                <li class="a"><a href="./assets/pages/resume.html" >RESUME</a></li>
-                <li class="a"><a href="./assets/pages/contact.html" >CONTACT</a></li>
-            </ul>
+            <div class="line1 nobg"></div>
+            <div class="line2 nobg"></div>
+            <div class="line3 nobg"></div>
+        </div>
+        <ul class="nav-links">
+            <li class="a"><a href="./index.html">HOME</a></li>
+            <li class="a"><a href="./assets/pages/about.html">ABOUT ME</a></li>
+            <li class="a"><a href="./assets/pages/portfolio.html">PORTFOLIO</a></li>
+            <li class="a"><a href="./assets/pages/resume.html">RESUME</a></li>
+            <li class="a"><a href="./assets/pages/contact.html">CONTACT</a></li>
+        </ul>
     </nav>
 
-    <div class="grid-container index-container">
-        <div class="col2 index-img">
-            <img src="./assets/images/avatar2.png" alt="" class=" home-avatar">
-        </div>
-        <div class="index animate__animated animate__rotateInDownLeft">
-            <h1 class="index-text t1">Welcome to my website!</h1>
-            
-            <div class="index-text t3">I turn ideas into <span style="color: #00b3ff;">digital solutions.</span></div>
-            <div>
+    <div class="home-split">
+
+        <div class="home-left fade-in-up">
+            <div class="home-label">Full-Stack Developer</div>
+            <h1 class="home-name">Sidorela.</h1>
+            <div class="home-divider"></div>
+            <div class="home-typewriter">
+                <span id="typewriter"></span><span class="typewriter-cursor">|</span>
+            </div>
+            <div class="home-buttons">
                 <button class="pdf-home-button"><a href="./assets/pages/resume.html">MY RESUME</a></button>
                 <button class="about-button"><a href="./assets/pages/about.html">ABOUT ME</a></button>
             </div>
         </div>
+
+        <div class="home-right fade-in-up" style="transition-delay: 0.2s;">
+            <img src="./assets/images/avatar2.png" alt="Sidorela" class="home-avatar">
+        </div>
+
     </div>
- <footer class="myfooter_nobg">
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="ticker-content">Python &nbsp;·&nbsp; Django &nbsp;·&nbsp; React &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; MongoDB &nbsp;·&nbsp; Docker &nbsp;·&nbsp; Git &nbsp;·&nbsp; Tailwind &nbsp;·&nbsp; Bootstrap &nbsp;·&nbsp; HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; Delphi &nbsp;·&nbsp; SQLite &nbsp;·&nbsp;&nbsp;</span>
+            <span class="ticker-content">Python &nbsp;·&nbsp; Django &nbsp;·&nbsp; React &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; MongoDB &nbsp;·&nbsp; Docker &nbsp;·&nbsp; Git &nbsp;·&nbsp; Tailwind &nbsp;·&nbsp; Bootstrap &nbsp;·&nbsp; HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; Delphi &nbsp;·&nbsp; SQLite &nbsp;·&nbsp;&nbsp;</span>
+        </div>
+    </div>
+
+    <footer class="myfooter">
         &copy; 2026 Created by Siddo. ALL RIGHTS RESERVED.
-</footer>
+    </footer>
+
 </body>
 </html>
